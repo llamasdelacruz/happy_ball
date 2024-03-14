@@ -4,4 +4,6 @@
     <string name="descripcion_roja">Esta bolita parece linda, pero cuando se enoja, es aun mas adorable</string>
     <string name="descripcion_verde">Es una bolita, verde y bonita, lista para la aventura</string>
     <string name="btn_aceptar">Seleccionar</string>
+    <string name="nombre">Nombre de usuario</string>
+    <string name="fondoIcono">#EC13D6</string>
 </resources>

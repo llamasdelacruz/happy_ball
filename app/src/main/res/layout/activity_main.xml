@@ -1,18 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@drawable/fondoinico">
 
     <TextView
+        android:id="@+id/LblNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nombre"
+        android:textColor="#ECE5ED"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="120dp"
+    />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/BtnEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LblNombre"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="35dp"
+
+        android:drawableLeft="@drawable/icono"
+        android:hint="Editar"
+        />
+
+    <TextView
+        android:id="@+id/TxtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BtnEditar"
+        android:layout_marginTop="45dp"
+        android:text="Mejor puntiación"
+        android:textColor="#ECE5ED"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/BtnSkins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TxtScore"
+        android:layout_marginBottom="-159dp"
+        android:text="Skins"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/BtnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TxtScore"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="-160dp"
+        android:layout_toEndOf="@+id/BtnSkins"
+        android:text="Iniciar"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
