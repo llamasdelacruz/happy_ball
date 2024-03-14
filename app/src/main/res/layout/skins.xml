@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- Bolita azul         -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                app:cardBackgroundColor="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bolitaAzul"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="100dp"
+
+                        app:srcCompat="@drawable/bolita_azul" />
+
+                    <TextView
+                        android:id="@+id/titulo_bolita_azul"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="100dp"
+                        android:text="Azulita"
+                        android:textAlignment="center"
+                        android:textColor="#80031863"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/descripcion_azul"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="19dp"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/descripcion_azul"
+                        android:textAlignment="center"
+                        android:textColor="#80031863"
+                        android:textSize="12dp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btn_azul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/btn_aceptar"
+                        android:textSize="10dp">
+
+                    </Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- Bolita roja            -->
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="30dp"
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                app:cardBackgroundColor="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bolitaRoja"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="100dp"
+
+                        app:srcCompat="@drawable/bolita_roja" />
+
+                    <TextView
+                        android:id="@+id/titulo_bolita_roja"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="100dp"
+                        android:text="Rojita"
+                        android:textAlignment="center"
+                        android:textColor="#500505"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/descripcion_roja"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="19dp"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/descripcion_roja"
+                        android:textAlignment="center"
+                        android:textColor="#80031863"
+                        android:textSize="12dp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btn_roja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/btn_aceptar"
+                        android:textSize="10dp">
+
+                    </Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Bolita  verde           -->
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="#F4F4F4">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bolitaVerde"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="100dp"
+
+                        app:srcCompat="@drawable/bolita_verde" />
+
+                    <TextView
+                        android:id="@+id/titulo_bolita_verde"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="100dp"
+                        android:text="Verdecita"
+                        android:textAlignment="center"
+                        android:textColor="#4CAF50"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/descripcion_verde"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="19dp"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/descripcion_verde"
+                        android:textAlignment="center"
+                        android:textColor="#80031863"
+                        android:textSize="12dp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btn_verde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/btn_aceptar"
+                        android:textSize="10dp">
+
+                    </Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- Bolita  jeff           -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="#F4F4F4">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/bolitaJeff"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="100dp"
+
+                        app:srcCompat="@drawable/jeff" />
+
+                    <TextView
+                        android:id="@+id/titulo_bolita_Jeff"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="100dp"
+                        android:text="Jeff"
+                        android:textAlignment="center"
+                        android:textColor="#151515"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/descripcion_Jeff"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="19dp"
+                        android:layout_marginStart="100dp"
+                        android:text="solo es jeff"
+                        android:textAlignment="center"
+                        android:textColor="#80031863"
+                        android:textSize="12dp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/btn_jeff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:text="@string/btn_aceptar"
+                        android:textSize="10dp">
+
+                    </Button>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
