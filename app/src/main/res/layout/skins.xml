@@ -4,8 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#C872D6"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:background="#673AB7"
+        android:layout_height="50dp"
+
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/bolitas" />
 
     <ScrollView
         android:layout_marginTop="100dp"
@@ -23,7 +33,8 @@
                 android:layout_width="306dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                app:cardBackgroundColor="#F4F4F4">
+
+                app:cardBackgroundColor="#F2D2F8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -83,7 +94,7 @@
                 android:layout_width="306dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                app:cardBackgroundColor="#F4F4F4">
+                app:cardBackgroundColor="#F2D2F8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -147,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
-                app:cardBackgroundColor="#F4F4F4">
+                app:cardBackgroundColor="#F2D2F8">
 
                 <LinearLayout
 
@@ -209,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30dp"
-                app:cardBackgroundColor="#F4F4F4">
+                app:cardBackgroundColor="#F2D2F8">
 
                 <LinearLayout
 
@@ -270,6 +281,13 @@
 
 
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="135dp"
+        android:layout_height="52dp"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/icono_m" />
 
 
 </RelativeLayout>
