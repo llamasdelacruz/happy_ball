@@ -8,18 +8,19 @@
     android:orientation="vertical"
     android:background="@drawable/fondoinico">
 
-    <TextView
+    <EditText
         android:id="@+id/LblNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/nombre"
+        android:hint="@string/nombre"
         android:textColor="#ECE5ED"
         android:textSize="35sp"
         android:textStyle="bold"
         android:layout_marginTop="120dp"
+        android:textAlignment="center"
     />
 
     <Button
@@ -30,22 +31,24 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="35dp"
-
-        android:drawableLeft="@drawable/icono"
+        android:textColor="#FFFFFF"
+        android:text="Guardar"
         android:hint="Editar"
+        android:onClick="evento"
         />
 
-    <TextView
+    <EditText
         android:id="@+id/TxtScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BtnEditar"
         android:layout_marginTop="45dp"
-        android:text="Mejor puntiación"
+        android:text="Mejor puntuación"
         android:textColor="#ECE5ED"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:editable="false"/>
 
     <Button
         android:id="@+id/BtnSkins"
