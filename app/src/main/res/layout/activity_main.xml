@@ -8,6 +8,20 @@
     android:orientation="vertical"
     android:background="@drawable/fondoinico">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="105dp"
+        android:text="Bienvenido"
+        android:textAlignment="center"
+        android:textColor="#ECE5ED"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/LblNombre"
         android:layout_width="wrap_content"
@@ -17,7 +31,7 @@
         android:layout_marginEnd="16dp"
         android:text="Bienvenido"
         android:textColor="#ECE5ED"
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="120dp"
         android:textAlignment="center"
@@ -37,6 +51,21 @@
         android:onClick="evento"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="127dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textColor="#ECE5ED"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/TxtScore"
         android:layout_width="wrap_content"
@@ -45,7 +74,7 @@
         android:layout_marginTop="45dp"
         android:text="Mejor puntuación"
         android:textColor="#ECE5ED"
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:editable="false"/>
@@ -55,7 +84,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TxtScore"
-        android:layout_marginBottom="-159dp"
+        android:layout_marginBottom="-161dp"
+        android:onClick="verSkins"
         android:text="Skins"
         android:textSize="35sp"
         android:textStyle="bold" />
@@ -65,11 +95,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TxtScore"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="86dp"
         android:layout_marginBottom="-160dp"
         android:layout_toEndOf="@+id/BtnSkins"
-        android:text="Iniciar"
         android:onClick="startGame"
+        android:text="Iniciar"
         android:textSize="35sp"
         android:textStyle="bold" />
 

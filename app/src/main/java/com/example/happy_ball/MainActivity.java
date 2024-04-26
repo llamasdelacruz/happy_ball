@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         nombre = (String) r.get(0);
         score = (String) r.get(1);
+        score = "0";
 
         if(!nombre.equals("Escribe tu nombre")){
             lab_nombre.setText(nombre);
@@ -140,6 +141,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void startGame(View view){
         Intent intent = new Intent(this, StartGame.class);
+        startActivity(intent);
+        finish();
+
+    }
+    public void verSkins(View view){
+        Intent intent = new Intent(this, Skins.class);
         startActivity(intent);
         finish();
 
