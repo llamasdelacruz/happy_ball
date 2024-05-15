@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         nombre = (String) r.get(0);
         score = (String) r.get(1);
-        score = "0";
+
 
         if(!nombre.equals("Escribe tu nombre")){
             lab_nombre.setText(nombre);
