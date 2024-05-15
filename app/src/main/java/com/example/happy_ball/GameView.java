@@ -3,6 +3,7 @@ package com.example.happy_ball;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,6 +27,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
@@ -36,7 +38,7 @@ public class GameView extends View{
     private ArrayList<Pipe> arrPipes;
     //espacio entre los tubos, el de abajo y arriba
     private int sumpipe, distance;
-    private  int score,bestscore = 0;
+    private  int score,bestscore;
     private boolean start;
     private Context context;
     private int soundJump;
@@ -48,10 +50,8 @@ public class GameView extends View{
        super(context, attrs);
        score = 0;
        this.context = context;
-       SharedPreferences sp = context.getSharedPreferences("gamesetting",Context.MODE_PRIVATE);
-       if(sp != null){
-           bestscore = sp.getInt("bestscore", 0);
-       }
+       buscar();
+
        start = false;
        initBird();
        initPipe();
@@ -138,9 +138,14 @@ public class GameView extends View{
                 //colisiones
                 if(bird.getRect().intersect(arrPipes.get(i).getRect()) || bird.getY()-bird.getHeight() < 0 || bird.getY()>Constants.SCREEN_HEIGHT){
                     Pipe.speed = 0;
+
+                    if(score>bestscore){
+                        bestscore = score;
+                        editar(bestscore);
+                    }
                     StartGame.txt_score_over.setText(StartGame.text_score.getText());
                     StartGame.txt_best_score.setText("Best: "+ bestscore);
-                    editar(bestscore);
+
                     StartGame.text_score.setVisibility(INVISIBLE);
                     StartGame.rl_game_over.setVisibility(VISIBLE);
                 }
@@ -150,13 +155,7 @@ public class GameView extends View{
                         && this.bird.getX()+this.bird.getWidth()<=arrPipes.get(i).getX()+arrPipes.get(i).getWidth()/2+Pipe.speed
                         && i <sumpipe/2){
                     score++;
-                    if(score>bestscore){
-                        bestscore = score;
-                        SharedPreferences sp = context.getSharedPreferences("gamesettings",Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sp.edit();
-                        editor.putInt("bestscore",bestscore);
-                        editor.apply();;
-                    }
+
                     StartGame.text_score.setText(""+score);
 
                 }
@@ -231,6 +230,33 @@ public class GameView extends View{
 
         int cant = bd.update("usuario", registro, "id ='U1'", null);
         bd.close();
+
+    }
+
+    public void buscar(){
+
+        String nombre, puntuacion;
+
+        try {
+            AdminSQL admin = new AdminSQL(this.context, "usuario", null, 1);
+            SQLiteDatabase bd = admin.getWritableDatabase();
+            Cursor fila =bd.rawQuery("select nombre, score from usuario where id = 'U1'", null);
+
+            if (fila.moveToFirst()) {
+                nombre = fila.getString(0);
+                String score = fila.getString(1);
+                bestscore = Integer.parseInt(score);
+            }
+            if (fila != null) {
+                fila.close();
+            }
+
+
+            bd.close();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
 
     }
 }
