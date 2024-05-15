@@ -45,6 +45,7 @@ public class GameView extends View{
     private float volume;
     private boolean loadedsound;
     private SoundPool soundpool;
+    private int bird1,bird2,fondo;
 
    public GameView(Context context, @Nullable AttributeSet attrs){
        super(context, attrs);
@@ -120,8 +121,8 @@ public class GameView extends View{
 
        //para el pajaro
        ArrayList<Bitmap> arrBms = new ArrayList<>();
-       arrBms.add(BitmapFactory.decodeResource(this.getResources(),R.drawable.bird));
-       arrBms.add(BitmapFactory.decodeResource(this.getResources(),R.drawable.bird2));
+       arrBms.add(BitmapFactory.decodeResource(this.getResources(),bird1));
+       arrBms.add(BitmapFactory.decodeResource(this.getResources(),bird2));
 
        bird.setArrBms(arrBms);
    }
@@ -240,11 +241,15 @@ public class GameView extends View{
         try {
             AdminSQL admin = new AdminSQL(this.context, "usuario", null, 1);
             SQLiteDatabase bd = admin.getWritableDatabase();
-            Cursor fila =bd.rawQuery("select nombre, score from usuario where id = 'U1'", null);
+            Cursor fila =bd.rawQuery("select score,bird1,bird2,fondo from usuario where id = 'U1'", null);
 
             if (fila.moveToFirst()) {
-                nombre = fila.getString(0);
-                String score = fila.getString(1);
+                String score = fila.getString(0);
+                bird1 = fila.getInt(1);
+                bird2 = fila.getInt(2);
+                fondo = fila.getInt(3);
+
+
                 bestscore = Integer.parseInt(score);
             }
             if (fila != null) {

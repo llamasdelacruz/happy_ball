@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#C872D6"
+    android:background="#EDDEEF"
     android:layout_height="match_parent">
 
 
@@ -47,17 +47,17 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="100dp"
 
-                        app:srcCompat="@drawable/bolita_azul" />
+                        app:srcCompat="@drawable/bird" />
 
                     <TextView
                         android:id="@+id/titulo_bolita_azul"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="100dp"
-                        android:text="Azulita"
+                        android:text="Flappy bird"
                         android:textAlignment="center"
-                        android:textColor="#80031863"
-                        android:textSize="20dp"
+                        android:textColor="#500505"
+                        android:textSize="15dp"
                         android:textStyle="bold">
 
                     </TextView>
@@ -82,7 +82,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="100dp"
                         android:text="@string/btn_aceptar"
-                        android:textSize="10dp">
+                        android:onClick="seleccionar_flappy"
+                        android:textSize="10dp"
+                        tools:ignore="OnClick">
 
                     </Button>
                 </LinearLayout>
@@ -107,17 +109,17 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="100dp"
 
-                        app:srcCompat="@drawable/bolita_roja" />
+                        app:srcCompat="@drawable/bird_amarilla1" />
 
                     <TextView
                         android:id="@+id/titulo_bolita_roja"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="100dp"
-                        android:text="Rojita"
+                        android:text="Pajaro amarillo"
                         android:textAlignment="center"
                         android:textColor="#500505"
-                        android:textSize="20dp"
+                        android:textSize="15dp"
                         android:textStyle="bold">
 
                     </TextView>
@@ -142,6 +144,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="100dp"
                         android:text="@string/btn_aceptar"
+                        android:onClick="seleccionar_amarillo"
                         android:textSize="10dp">
 
                     </Button>
@@ -172,17 +175,17 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="100dp"
 
-                        app:srcCompat="@drawable/bolita_verde" />
+                        app:srcCompat="@drawable/bird_cafe1" />
 
                     <TextView
                         android:id="@+id/titulo_bolita_verde"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="100dp"
-                        android:text="Verdecita"
+                        android:text="Borrachito"
                         android:textAlignment="center"
-                        android:textColor="#4CAF50"
-                        android:textSize="20dp"
+                        android:textColor="#500505"
+                        android:textSize="15dp"
                         android:textStyle="bold">
 
                     </TextView>
@@ -207,6 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="100dp"
                         android:text="@string/btn_aceptar"
+                        android:onClick="seleccionar_borracho"
                         android:textSize="10dp">
 
                     </Button>
@@ -243,8 +247,8 @@
                         android:layout_marginStart="100dp"
                         android:text="Jeff"
                         android:textAlignment="center"
-                        android:textColor="#151515"
-                        android:textSize="20dp"
+                        android:textColor="#500505"
+                        android:textSize="15dp"
                         android:textStyle="bold">
 
                     </TextView>
@@ -269,6 +273,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="100dp"
                         android:text="@string/btn_aceptar"
+                        android:onClick="seleccionar_jeff"
                         android:textSize="10dp">
 
                     </Button>
@@ -287,6 +292,7 @@
         android:layout_width="135dp"
         android:layout_height="52dp"
         android:layout_alignParentEnd="true"
+        android:onClick="regresar"
         app:srcCompat="@drawable/icono_m" />
 
 

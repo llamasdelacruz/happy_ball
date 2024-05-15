@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Happy_ball</string>
-    <string name="descripcion_azul">La mejor bolita que podrias desear !!! Azulita !!!</string>
-    <string name="descripcion_roja">Esta bolita parece linda, pero cuando se enoja, es aun mas adorable</string>
-    <string name="descripcion_verde">Es una bolita, verde y bonita, lista para la aventura</string>
+    <string name="descripcion_azul">Un pajaro comun, haciendo cosas comunes</string>
+    <string name="descripcion_roja">Nos lo vendio un vato en el mercado</string>
+    <string name="descripcion_verde">Aveces se le pasan las copas</string>
     <string name="btn_aceptar">Seleccionar</string>
     <string name="nombre">Escribe tu nombre</string>
     <string name="fondoIcono">#EC13D6</string>
