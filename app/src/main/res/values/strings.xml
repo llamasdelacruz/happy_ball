@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Happy_ball</string>
-    <string name="descripcion_azul">Un pajaro comun, haciendo cosas comunes</string>
-    <string name="descripcion_roja">Nos lo vendio un vato en el mercado</string>
+    <string name="descripcion_azul">Un pájaro común, haciendo cosas comunes</string>
+    <string name="descripcion_roja">Nos lo vendió un hombre en el mercado</string>
     <string name="descripcion_verde">Aveces se le pasan las copas</string>
     <string name="btn_aceptar">Seleccionar</string>
     <string name="nombre">Escribe tu nombre</string>

@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     registro.put("score", 0);
     registro.put("bird1",R.drawable.bird);
     registro.put("bird2",R.drawable.bird2);
-    registro.put("fondo",R.drawable.fondoinico);
+    registro.put("fondo",R.drawable.bg);
 
     bd.insert("usuario", null, registro);
     bd.close();
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
     public void startGame(View view){
         Intent intent = new Intent(this, StartGame.class);
         startActivity(intent);
-        finish();
+
 
     }
     public void verSkins(View view){

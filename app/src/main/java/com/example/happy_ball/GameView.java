@@ -21,6 +21,7 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.app.Activity;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -45,15 +46,16 @@ public class GameView extends View{
     private float volume;
     private boolean loadedsound;
     private SoundPool soundpool;
-    private int bird1,bird2,fondo;
+    private int bird1,bird2;
+    public RelativeLayout relativeLayout;
 
    public GameView(Context context, @Nullable AttributeSet attrs){
        super(context, attrs);
        score = 0;
+       start = false;
        this.context = context;
        buscar();
 
-       start = false;
        initBird();
        initPipe();
        handler = new Handler();
@@ -126,6 +128,7 @@ public class GameView extends View{
 
        bird.setArrBms(arrBms);
    }
+
 
    public  void draw(Canvas canvas){
         super.draw(canvas);
@@ -215,7 +218,8 @@ public class GameView extends View{
     public void reset() {
        StartGame.text_score.setText("0");
        score=0;
-        initPipe();
+
+       initPipe();
        initBird();
 
     }
@@ -236,7 +240,7 @@ public class GameView extends View{
 
     public void buscar(){
 
-        String nombre, puntuacion;
+
 
         try {
             AdminSQL admin = new AdminSQL(this.context, "usuario", null, 1);
@@ -247,7 +251,7 @@ public class GameView extends View{
                 String score = fila.getString(0);
                 bird1 = fila.getInt(1);
                 bird2 = fila.getInt(2);
-                fondo = fila.getInt(3);
+
 
 
                 bestscore = Integer.parseInt(score);

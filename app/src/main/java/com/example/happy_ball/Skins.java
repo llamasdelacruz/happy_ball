@@ -104,6 +104,48 @@ public class Skins extends AppCompatActivity {
 
     }
 
+
+    public void seleccionar_fondo_original(View view){
+        AdminSQL admin = new AdminSQL(this, "usuario", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+
+        ContentValues registro = new ContentValues();
+        registro.put("fondo", R.drawable.bg);
+
+
+        int cant = bd.update("usuario", registro, "id ='U1'", null);
+        bd.close();
+
+        if (cant == 1) {
+            Toast.makeText(this, "Se ha seleccionado el fondo original", Toast.LENGTH_SHORT)
+                    .show();
+
+        }
+
+    }
+
+    public void seleccionar_fondo_ciudad(View view){
+        AdminSQL admin = new AdminSQL(this, "usuario", null, 1);
+        SQLiteDatabase bd = admin.getWritableDatabase();
+
+        ContentValues registro = new ContentValues();
+        registro.put("fondo", R.drawable.ciudad);
+
+
+        int cant = bd.update("usuario", registro, "id ='U1'", null);
+        bd.close();
+
+        if (cant == 1) {
+            Toast.makeText(this, "Se ha seleccionado el fondo ciudad", Toast.LENGTH_SHORT)
+                    .show();
+
+        }
+
+    }
+
+
+
+
     public void  regresar(View view){
         finish();
     }
