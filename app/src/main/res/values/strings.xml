@@ -6,4 +6,5 @@
     <string name="btn_aceptar">Seleccionar</string>
     <string name="nombre">Escribe tu nombre</string>
     <string name="fondoIcono">#EC13D6</string>
+    <string name="clolrAzul">#FDCC6E</string>
 </resources>

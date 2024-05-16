@@ -6,21 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondoinico">
+    android:background="@drawable/iniciobg">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="105dp"
-        android:text="Bienvenido"
-        android:textAlignment="center"
-        android:textColor="#ECE5ED"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+
+
 
     <EditText
         android:id="@+id/LblNombre"
@@ -29,40 +18,41 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Bienvenido"
-        android:textColor="#ECE5ED"
-        android:textSize="20sp"
+        android:text="Escribe tu nombre"
+        android:textColor="#12C3C9"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_marginTop="120dp"
         android:textAlignment="center"
-    />
+        />
 
     <Button
         android:id="@+id/BtnEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/LblNombre"
-        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="35dp"
-        android:textColor="#FFFFFF"
         android:text="Guardar"
         android:hint="Editar"
         android:onClick="evento"
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/BtnEditar"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="127dp"
-        android:text="Score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginEnd="-5dp"
+        android:text="Record"
         android:textAlignment="center"
-        android:textColor="#ECE5ED"
+        android:textColor="#F78D70"
         android:textSize="35sp"
         android:textStyle="bold" />
 
@@ -71,13 +61,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BtnEditar"
-        android:layout_marginTop="45dp"
-        android:text="Mejor puntuación"
-        android:textColor="#ECE5ED"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:editable="false"/>
+        android:layout_marginTop="118dp"
+        android:editable="false"
+        android:text="Mejor puntuación"
+        android:textColor="#FECC6F"
+        android:textSize="35sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/BtnSkins"
@@ -92,10 +82,10 @@
 
     <Button
         android:id="@+id/BtnInicio"
-        android:layout_width="wrap_content"
+        android:layout_width="186dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TxtScore"
-        android:layout_marginStart="86dp"
+        android:layout_marginStart="65dp"
         android:layout_marginBottom="-160dp"
         android:layout_toEndOf="@+id/BtnSkins"
         android:onClick="startGame"
