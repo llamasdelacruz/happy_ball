@@ -115,8 +115,10 @@ public class StartGame extends AppCompatActivity {
     }
 
     public void  regresar(View view){
+        setResult(RESULT_OK);
         finish();
     }
+
 
 
 

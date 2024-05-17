@@ -143,17 +143,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startGame(View view){
+
         Intent intent = new Intent(this, StartGame.class);
-        startActivity(intent);
-
-
+        startActivityForResult(intent, 1);
     }
+
     public void verSkins(View view){
         Intent intent = new Intent(this, Skins.class);
         startActivity(intent);
         // no le puse finish para que pudiera regresar a la actividad anterior
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // Cuando regreses de StartGame, consulta el nuevo score de la base de datos
+            AdminSQL admin = new AdminSQL(this, "usuario", null, 1);
+            SQLiteDatabase bd = admin.getWritableDatabase();
+
+            Cursor fila =bd.rawQuery("select score from usuario where id = 'U1'", null);
+
+            if(fila.moveToFirst()){
+
+                int score = fila.getInt(0);
+                String puntuacion = String.valueOf(score);
+                lab_score.setText(puntuacion);
+
+            }
+        }
+    }
+
 
 
 }
